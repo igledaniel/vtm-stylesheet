@@ -373,42 +373,11 @@
 						<text use="street-label-sm" />
 					</m>
 				</m>
-
-				<!-- highway tunnel cores
-				<m v="steps|footway|path">
-					<line stroke="#d6dac2" width="0.45" cap="round" />
-				</m>
-				<m v="track">
-					<line stroke="#d6dac2" width="0.7" cap="round" />
-				</m>
-				<m v="cycleway|bridleway|service">
-					<line stroke="#d6dac2" dasharray="5,5" cap="round" />
-				</m>
-				<m v="construction">
-					<line stroke="#d6dac2" width="1.0" cap="round" />
-				</m>
-				<m v="road">
-					<line stroke="#d6dac2" width="1.25" cap="round" />
-				</m>
-				<m v="pedestrian|unclassified|residential|living_street|byway">
-					<line stroke="#d6dac2" width="1.35" cap="round" />
-				</m>
-				<m v="tertiary|secondary_link|primary_link|trunk_link|motorway_link|secondary|primary|trunk">
-					<line stroke="#d6dac2" width="1.5" cap="round" />
-					<m zoom-min="11">
-						<text use="street-label-sm" />
-					</m>
-				</m> -->
 			</m>
 
 			<!-- railway tunnel -->
-			<m k="kind">
-				<m v="tram|subway|light_rail|narrow_gauge">
-					<line stroke="#dcdbb3" width="2" dasharray="4,2" cap="butt" />
-				</m>
-				<m v="rail">
-					<line stroke="#dcdbb3" width="2" dasharray="4,2" cap="butt" />
-				</m>
+			<m k="kind" v="tram|subway|light_rail|narrow_gauge|rail">
+				<line stroke="#dcdbb3" width="2" dasharray="4,2" cap="butt" />
 			</m>
 		</m>
 
@@ -953,42 +922,24 @@
 				<symbol src="17_movie_theatre" />
 				<!--<text use="poi-label" />-->
 			</m>
-			<!--
-			<m v="drinking_water" zoom-min="17">
-				<symbol src="drinking_water" />
-			</m>
-			-->
 			<m v="fast_food" k="name" zoom-min="16">
 				<symbol src="22_restaurant" />
 				<m zoom-min="17">
-						<!--<text use="poi-label" />-->
-					</m>
+					<!--<text use="poi-label" />-->
+				</m>
 			</m>
-			<!--
-			<m v="fire_station" zoom-min="17">
-				<symbol src="firebrigade" />
-			</m>
-			<m v="fountain" zoom-min="17">
-				<symbol src="fountain" />
-			</m>
-			-->
 			<m v="fuel" k="name" zoom-min="18">
 				<symbol src="7_gas_station" />
 				<m zoom-min="17">
-						<!--<text use="poi-label" />-->
-					</m>
+					<!--<text use="poi-label" />-->
+				</m>
 			</m>
 			<m v="hospital" k="name" zoom-min="16">
 				<symbol src="13_hospital" />
 				<m zoom-min="17">
-						<!--<text use="poi-label" />-->
-					</m>
+					<!--<text use="poi-label" />-->
+				</m>
 			</m>
-			<!--
-			<m v="kindergarten" zoom-min="17">
-				<symbol src="kindergarten" />
-			</m>
-			-->
 			<m v="library" k="name" zoom-min="18">
 				<symbol src="10_library" />
 				<!--<text use="poi-label" />-->
@@ -1035,11 +986,6 @@
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
-			<!--
-			<m v="recycling" zoom-min="17">
-				<symbol src="recycling" />
-			</m>
-		-->
 			<m v="restaurant" zoom-min="16">
 				<symbol src="22_restaurant" />
 				<m zoom-min="17">
@@ -1050,14 +996,6 @@
 				<symbol src="11_school" />
 				<!--<text use="poi-label" />-->
 			</m>
-			<!--
-			<m v="shelter" zoom-min="17">
-				<symbol src="shelter" />
-			</m>
-			<m v="telephone" zoom-min="17">
-				<symbol src="telephone" />
-			</m>
-		-->
 			<m v="theatre" zoom-min="18">
 				<symbol src="17_movie_theatre" />
 				<!--<text use="poi-label" />-->
@@ -1079,10 +1017,10 @@
 		</m>
 	</m>
 
-	<m k="kind">
+	<m k="kind" v="memorial|archaeological_site">
 		<circle radius="3" fill="#4040ff" stroke="#606060" width="1.5" />
 		<m zoom-min="17">
-			<!--<text use="poi-label" />-->
+			<text use="poi-label" />
 		</m>
 	</m>
 
@@ -1090,15 +1028,6 @@
 		<caption k="addr:housenumber" style="bold" size="10" fill="#606060" stroke="#ffffff" stroke-width="2.0" />
 	</m>
 
-	<!--
-		<m k="kind" v="playground" zoom-min="18">
-			<symbol src="playground" />
-		</m>
-
-		<m k="kind" v="windmill" zoom-min="20">
-			<symbol src="windmill" />
-		</m>
-	-->
 	<m k="kind">
 		<m select="first">
 			<m v="cave_entrance" zoom-min="20">
@@ -1158,7 +1087,6 @@
 				<caption k="name" size="28" fill="#38678F" priority="3" />
 			</m>
 		</m>
-
 
 		<m v="island">
 			<m zoom-min="14">
