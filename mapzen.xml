@@ -103,7 +103,7 @@
 			<text use="park-label" />
 		</m>
 
-		<m k="natural|landuse" v="forest|wood|scrub">
+		<m k="natural|kind" v="forest|wood|scrub">
 			<m k="wood" v="coniferous|deciduous|mixed" fade="9">
 				<area src="patterns/park_texture.png" />
 				<line use="park-line" />
@@ -226,7 +226,7 @@
 				<area src="patterns/water_texture.png" fill="#8DB4B7" />
 			</m>
 		</m>
-		<m k="leisure|landuse" zoom-min="14">
+		<m k="leisure|kind" zoom-min="14">
 			<m v="nature_reserve" fade="9">
 				<area src="patterns/park_texture.png" />
 				<line use="park-line" />
@@ -840,29 +840,23 @@
 			</m>
 		</m>
 
-		<m k="boundary">
-			<m k="boundary" v="national_park">
+		<m k="kind">
+			<m v="national_park">
 				<line stroke="#000000" width="0.75" fix="true" dasharray="15, 5, 5, 5" />
 			</m>
-			<m k="boundary" v="administrative">
-				<m k="kind">
-					<m k="kind" v="4">
-						<m zoom-min="3" zoom-max="9">
-							<line stroke="#6da1a5" width="1.0" fix="true" stipple="4" stipple-width="0.9" stipple-stroke="#e8ecd3"
-							dasharray="10, 5, 5, 5" />
-						</m>
+			<m v="administrative">
+				<m k="admin_level">
+					<m v="4" zoom-min="3" zoom-max="9">
+						<line stroke="#6da1a5" width="1.0" fix="true" stipple="4" stipple-width="0.9" stipple-stroke="#e8ecd3"
+						dasharray="10, 5, 5, 5" />
 					</m>
-					<m k="kind" v="3">
-						<m zoom-min="1" zoom-max="4">
-							<line stroke="#465b73" width="0.75" fix="true" stipple="4" stipple-width="0.9" stipple-stroke="#e8ecd3"
-							dasharray="10, 5, 5, 5" />
-						</m>
+					<m v="3" zoom-min="1" zoom-max="4">
+						<line stroke="#465b73" width="0.75" fix="true" stipple="4" stipple-width="0.9" stipple-stroke="#e8ecd3"
+						dasharray="10, 5, 5, 5" />
 					</m>
-					<m k="kind" v="2">
-						<m zoom-min="1" zoom-max="2">
-							<line stroke="#000000" width="1.0" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#e8ecd3"
-							dasharray="10, 5, 5, 5" />
-						</m>
+					<m v="2" zoom-min="1" zoom-max="2">
+						<line stroke="#000000" width="1.0" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#e8ecd3"
+						dasharray="10, 5, 5, 5" />
 					</m>
 				</m>
 			</m>
