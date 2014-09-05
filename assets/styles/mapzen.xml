@@ -61,7 +61,7 @@
 				<area src="patterns/park_texture.png" />
 				<line use="park-line" />
 			</m>
-			<m v="farmyard" fade="9">
+			<m k="kind" v="residential|farmyard" fade="9">
 				<area src="patterns/park_texture.png" />
 				<line use="park-line" />
 			</m>
