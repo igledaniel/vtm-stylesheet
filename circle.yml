@@ -3,7 +3,7 @@ machine:
     version: 2.1.2
 test:
   override:
-    - echo "we need no tests"
+    - ./test.rb
 deployment:
   staging:
     branch: master
