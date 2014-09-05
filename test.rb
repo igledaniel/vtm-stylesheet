@@ -12,6 +12,7 @@ Find.find('.') do |path|
       }
       file.close
     rescue Nokogiri::XML::SyntaxError => e
+      puts path
       puts e
       exit 1
     end
