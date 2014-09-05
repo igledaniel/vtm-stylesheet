@@ -8,7 +8,15 @@ task "upload" do
     secret_access_key: ENV['AWS_SECRET']
   )
   s3 = AWS::S3.new
+  index_page = <<-EOM
+<html>
+<head>
+<meta HTTP-EQUIV="REFRESH" content="0; url=https://github.com/mapzen/vtm-stylesheet"></html>" )
+</head>
+</html>
+EOM
   bucket = s3.buckets['vector-styles.mapzen.com']
+  bucket.objects.create("index.html", index_page)
   Find.find('assets') do |path|
     if !FileTest.directory?(path)
       bucket.objects.create(path, File.read(path))
