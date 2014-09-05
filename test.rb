@@ -3,7 +3,7 @@
 require 'nokogiri'
 require 'find'
 
-Find.find('.') do |path|
+Find.find('assets') do |path|
   if !FileTest.directory?(path) && File.extname(path) == ".xml"
     begin
       file = File.open(path)
