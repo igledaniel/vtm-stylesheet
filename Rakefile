@@ -17,10 +17,12 @@ task "upload" do
 EOM
   bucket = s3.buckets['vector-styles.mapzen.com']
   bucket.objects.create("index.html", index_page)
+  list_of_files = []
   Find.find('assets') do |path|
     if !FileTest.directory?(path)
+      list_of_files << path
       bucket.objects.create(path, File.read(path))
     end
   end
-  
+  buckets.objects.create("manifest", list_of_files.join("\n"))
 end
