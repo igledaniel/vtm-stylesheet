@@ -24,5 +24,5 @@ EOM
       bucket.objects.create(path, File.read(path))
     end
   end
-  buckets.objects.create("manifest", list_of_files.join("\n"))
+  bucket.objects.create("manifest", list_of_files.join("\n"))
 end
