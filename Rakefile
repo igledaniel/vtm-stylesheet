@@ -15,14 +15,18 @@ task "upload" do
 </head>
 </html>
 EOM
+  cache_options = { 
+    cache_control: "max-age=3600", 
+    expires: Time.now.utc + 3600 
+  }
   bucket = s3.buckets['vector-styles.mapzen.com']
-  bucket.objects.create("index.html", index_page)
+  bucket.objects.create("index.html", index_page, cache_options)
   list_of_files = []
   Find.find('assets') do |path|
     if !FileTest.directory?(path)
       list_of_files << path
-      bucket.objects.create(path, File.read(path))
+      bucket.objects.create(path, File.read(path), cache_options)
     end
   end
-  bucket.objects.create("manifest", list_of_files.join("\n"))
+  bucket.objects.create("manifest", list_of_files.join("\n"), cache_options)
 end
