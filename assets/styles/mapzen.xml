@@ -470,9 +470,9 @@
 				<area fill="#e1e8c9" stroke="#ecaea9" stroke-width="0.75" />
 			</m>
 			<!-- `extrusion`s currently break due to float heights. -->
-			<!-- <m zoom-min="17"> -->
-				<!-- <extrusion side-color="#c4c8b0" top-color="#e1e8c9" line-color="#ecaea9" /> -->
-			<!-- </m> -->
+			<m zoom-min="17">
+				<extrusion side-color="#c4c8b0" top-color="#e1e8c9" line-color="#ecaea9" />
+			</m>
 			<m zoom-min="18">
 				<caption k="name" size="16" character-spacing="0.3" fill="#294d6b" stroke="#e4e9cc" stroke-width="1.0"  />
 				<caption k="addr:housenumber" size="16" character-spacing="0.3" fill="#294d6b" stroke="#e4e9cc" stroke-width="1.0" />
@@ -522,7 +522,7 @@
 					</m>
 
 					<m k="kind" v="~|no|false">
-						<m>
+						<m v="service|construction|road|pedestrian|unclassified|residential|living_street|byway|tertiary|tertiary_link|secondary_link|primary_link|trunk_link|motorway_link|secondary|primary|trunk|motorway">
 							<m v="service">
 								<line stroke="#f3f7e6" width="0.85" />
 								<text use="street-label-sm" />
