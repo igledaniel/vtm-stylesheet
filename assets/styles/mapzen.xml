@@ -1,4 +1,4 @@
-<rendertheme xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme ../../rendertheme.xsd" version="1" map-background="#ebf0d8" >
+<rendertheme xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme ../../rendertheme.xsd" version="1" map-background="#d3c7568" >
 	<!-- icons 32 -->
 	<atlas img="styles/poi_icons_32.png">
 		<rect id="1_airport" pos="0 0 32 32" />
