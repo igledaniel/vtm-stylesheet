@@ -218,8 +218,7 @@
 					<area fill="#e8ecd3" stroke="#a3a27c" stroke-width="0.025" />
 				</m>
 				<m k="area" v="~|no|false">
-					<line stroke="#000000" width="0.75" />
-					<line stroke="#000000" width="0.7" />
+					<line stroke="#e8ecd3" width="0.75" />
 				</m>
 			</m>
 			<m v="swimming_pool">
@@ -368,7 +367,7 @@
 					<line stroke="#d6dac2" width="1.5" dasharray="5,5" cap="round" />
 				</m>
 				<m v="tertiary|secondary_link|primary_link|trunk_link|motorway_link|secondary|primary|trunk">
-					<line stipple-stroke="#A7A89B" width="2.6" stroke="#00A7A89B" stipple="2" stipple-width="1.5" cap="round" fix="true" />
+					<line stipple-stroke="#A7A89B" width="2.6" stroke="#A7A89B" stipple="2" stipple-width="0" cap="round" fix="true" />
 					<m zoom-min="11">
 						<text use="street-label-sm" />
 					</m>
@@ -561,11 +560,11 @@
 							<m v="primary_link" zoom-min="9">
 								<line use="primary" />
 								<m zoom-min="11">
-									<line width="+0.5" />
+									<line use="primary" />
 									<text use="street-label-sm" />
 								</m>
 								<m zoom-min="16">
-									<line width="+1.5" />
+									<line use="primary" />
 								</m>
 							</m>
 							<m v="trunk_link">
