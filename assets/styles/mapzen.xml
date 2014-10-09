@@ -52,17 +52,18 @@
 	<style-text id="street-label-lg" k="name" size="28" fill="#294d6b" stroke="#e4e9cc" stroke-width="2.0" priority="1" />
 
 	<style-text id="poi-label" k="name" size="16" fill="#000000" stroke="#e8ecd3" stroke-width="0.5" dy="2" dx="2" text-align="center" />
+	<style-area id="park" src="patterns/park_texture.png" />
 
 	<!-- ways -->
 	<m e="way">
 		<!-- parks, playgrounds + labels -->
-		<m k="kind" select="first">
+		<m select="first">
 			<m v="military" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 			<m k="kind" v="residential|farmyard" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 			<m v="retail">
@@ -84,15 +85,15 @@
 				<area fill="#ebf0d8" stroke="#d4d8c0" stroke-width="0.2" />
 			</m>
 			<m v="cemetery" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 			<m v="field|farm|farmland|meadow|grass" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 			<m v="allotments|village_green|recreation_ground" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 			<m v="reservoir|basin">
@@ -103,13 +104,13 @@
 			<text use="park-label" />
 		</m>
 
-		<m k="natural|kind" v="forest|wood|scrub">
+		<m k="natural" v="forest|wood|scrub">
 			<m k="wood" v="coniferous|deciduous|mixed" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 			<m k="wood" v="~" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 			</m>
 			<m zoom-min="15">
 				<text use="park-label" />
@@ -123,7 +124,7 @@
 					<area fill="#ebf0d8" stroke="#d4d8c0" stroke-width="0.2" />
 				</m>
 				<m v="grave_yard" fade="9">
-					<area src="patterns/park_texture.png" />
+					<area use="park"/>
 					<line use="park-line" />
 				</m>
 				<m v="parking">
@@ -148,19 +149,17 @@
 		</m>
 
 		<!-- natural -->
-		<m k="kind">
-			<m select="first">
-				<m v="coastline">
-					<m closed="no">
-						<line stroke="#708599" fix="true" cap="butt" width="2.0" />
-					</m>
-					<m closed="yes">
-						<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.4" />
-					</m>
+		<m select="first">
+			<m v="coastline">
+				<m closed="no">
+					<line stroke="#708599" fix="true" cap="butt" width="2.0" />
+				</m>
+				<m closed="yes">
+					<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.4" />
 				</m>
 			</m>
 		</m>
-		<m k="kind" zoom-min="10">
+		<m zoom-min="10">
 			<m v="glacier">
 				<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.8" />
 			</m>
@@ -185,7 +184,7 @@
 		<m k="kind">
 			<!-- park labels -->
 			<m v="park|garden|golf_course|common|green" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<m zoom-min="11">
 					<line stroke="#898b61" width="0.3" cap="butt" />
 				</m>
@@ -195,7 +194,7 @@
 			</m>
 			<m v="playground|playing_fields|pitch|dog_park" fade="9">
 				<m zoom-min="13">
-					<area src="patterns/park_texture.png" />
+					<area use="park"/>
 				</m>
 				<m zoom-min="17">
 					<line stroke="#898b61" width="0.3" cap="butt" />
@@ -203,14 +202,14 @@
 				</m>
 			</m>
 			<m v="stadium" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 				<m zoom-min="17">
 					<text use="park-label" />
 				</m>
 			</m>
 			<m v="sports_centre|water_park" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 			<m v="track">
@@ -227,7 +226,7 @@
 		</m>
 		<m k="leisure|kind" zoom-min="14">
 			<m v="nature_reserve" fade="9">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line use="park-line" />
 			</m>
 		</m>
@@ -295,7 +294,7 @@
 
 		<!-- military -->
 		<m k="military">
-			<area src="patterns/park_texture.png" />
+			<area use="park"/>
 			<line stroke="#898b61" width="0.2" cap="butt" />
 			<caption k="name" size="18" fill="#373737" />
 		</m>
@@ -303,7 +302,7 @@
 		<!-- sport -->
 		<m k="sport">
 			<m v="soccer">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line stroke="#898b61" width="0.2" cap="butt" />
 				<m zoom-min="17">
 					<symbol src="27_soccer" />
@@ -313,7 +312,7 @@
 				<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.2" />
 			</m>
 			<m v="tennis">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line stroke="#898b61" width="0.2" cap="butt" />
 				<m zoom-min="17">
 					<symbol src="26_sports" />
@@ -327,7 +326,7 @@
 				<area fill="#f2caea" />
 			</m>
 			<m v="zoo|picnic_site|caravan_site|camp_site">
-				<area src="patterns/park_texture.png" />
+				<area use="park"/>
 				<line stroke="#898b61" width="0.2" cap="butt" />
 			</m>
 			<m k="name" zoom-min="16">
@@ -616,7 +615,9 @@
 									<text use="street-label" />
 								</m>
 							</m>
-							<outline use="casing" />
+							<m select="when-matched">
+								<outline use="casing" />
+							</m>
 						</m>
 					</m>
 
