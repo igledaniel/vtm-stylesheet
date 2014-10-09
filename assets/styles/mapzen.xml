@@ -616,7 +616,9 @@
 									<text use="street-label" />
 								</m>
 							</m>
-							<outline use="casing" />
+							<m select="when-matched">
+								<outline use="casing" />
+							</m>
 						</m>
 					</m>
 
