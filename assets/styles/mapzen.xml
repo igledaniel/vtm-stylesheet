@@ -238,7 +238,7 @@
 				<area src="patterns/water_texture.png" fill="#8DB4B7" />
 				<line stroke="#243F3F" width="0.25" cap="butt" />
 				<m zoom-min="13">
-					<caption k="name" size="18" fill="#373737" />
+					<!-- <caption k="name" size="18" fill="#373737" /> -->
 				</m>
 			</m>
 
