@@ -489,8 +489,8 @@
 					<m v="footway|platform|corridor">
 						<line stroke="#ebf0d8" width="1.4" fix="true" cap="round" />
 					</m>
-					<m v="cycleway">
-						<line stroke="#ebf0d8" width="1.0" dasharray="4,4" cap="round" />
+					<m k="highway" v="cycleway">
+						<line stroke="#dcdbb3" width="4.0" cap="butt" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#f3f7e6" />
 					</m>
 					<m v="bridleway">
 						<line stroke="#ebf0d8" width="0.85" />
