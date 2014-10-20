@@ -591,9 +591,7 @@
 								</m>
 							</m>
 							<m v="trunk">
-								<m zoom-min="14">
-									<line use="primary" />
-								</m>
+								<line use="primary" />
 								<m zoom-min="16">
 									<line use="trunk" />
 									<text use="street-label-sm" />
