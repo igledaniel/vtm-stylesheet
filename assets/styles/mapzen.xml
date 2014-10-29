@@ -137,13 +137,13 @@
 					<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.15" />
 				</m>
 				<m v="hospital" zoom-min="16">
-					<symbol src="13_hospital" />
+					<!-- <symbol src="13_hospital" /> -->
 				</m>
 				<m v="theatre" zoom-min="16">
-					<symbol src="17_movie_theatre" />
+					<!-- <symbol src="17_movie_theatre" /> -->
 				</m>
 				<m v="toilets" zoom-min="16">
-					<symbol src="21_toilet" />
+					<!-- <symbol src="21_toilet" /> -->
 				</m>
 			</m>
 		</m>
@@ -305,7 +305,7 @@
 				<area use="park"/>
 				<line stroke="#898b61" width="0.2" cap="butt" />
 				<m zoom-min="17">
-					<symbol src="27_soccer" />
+					<!-- <symbol src="27_soccer" /> -->
 				</m>
 			</m>
 			<m v="swimming|canoe|diving|scuba_diving">
@@ -315,7 +315,7 @@
 				<area use="park"/>
 				<line stroke="#898b61" width="0.2" cap="butt" />
 				<m zoom-min="17">
-					<symbol src="26_sports" />
+					<!-- <symbol src="26_sports" /> -->
 				</m>
 			</m>
 		</m>
@@ -331,7 +331,7 @@
 			</m>
 			<m k="name" zoom-min="16">
 				<text use="water-label" />
-				<symbol src="6_park" />
+				<!-- <symbol src="6_park" /> -->
 			</m>
 		</m>
 
@@ -786,13 +786,13 @@
 			<line stroke="#202020" width="0.4" cap="round" />
 			<line stroke="#202020" width="4.0" dasharray="2,200" cap="round" />
 			<m k="kind" v="cable_car">
-				<symbol src="" />
+				<!-- <symbol src="" /> -->
 			</m>
 			<m k="kind" v="chair_lift">
-				<symbol src="" />
+				<!-- <symbol src="" /> -->
 			</m>
 			<m k="kind" v="gondola">
-				<symbol src="" />
+				<!-- <symbol src="" /> -->
 			</m>
 			<m zoom-min="17">
 				<text k="name" style="bold" size="10" fill="#606060" stroke="#ffffff" stroke-width="2.0" />
@@ -864,10 +864,10 @@
 	<m e="node">
 		<m k="kind">
 			<m k="kind" v="helipad" zoom-min="16">
-				<symbol src="1_airport" />
+				<!-- <symbol src="1_airport" /> -->
 			</m>
 			<m k="kind" v="aerodrome|airport" zoom-min="16">
-				<symbol src="1_airport" />
+				<!-- <symbol src="1_airport" /> -->
 			</m>
 		</m>
 
@@ -878,7 +878,7 @@
 
 	<m k="kind">
 		<m k="kind" v="bus_stop" zoom-min="17">
-			<symbol src="5_bus" />
+			<!-- <symbol src="5_bus" /> -->
 		</m>
 		<m k="kind" v="traffic_signals" zoom-min="16">
 			<!-- <symbol src="traffic_signal" /> -->
@@ -891,113 +891,113 @@
 	<m k="amenity">
 		<m select="first">
 			<m v="atm" k="name" zoom-min="16">
-				<symbol src="9_bank" />
+				<!-- <symbol src="9_bank" /> -->
 			</m>
 			<m v="bank" k="name" zoom-min="16">
-				<symbol src="9_bank" />
+				<!-- <symbol src="9_bank" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 
 			<m v="bus_station" zoom-min="17">
-				<symbol src="5_bus" />
+				<!-- <symbol src="5_bus" /> -->
 			</m>
 
 			<m v="cafe" k="name" zoom-min="16">
-				<symbol src="23_cafe" />
+				<!-- <symbol src="23_cafe" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 
 			<m v="cinema" k="name" zoom-min="18">
-				<symbol src="17_movie_theatre" />
+				<!-- <symbol src="17_movie_theatre" /> -->
 				<!--<text use="poi-label" />-->
 			</m>
 			<m v="fast_food" k="name" zoom-min="16">
-				<symbol src="22_restaurant" />
+				<!-- <symbol src="22_restaurant" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 			<m v="fuel" k="name" zoom-min="18">
-				<symbol src="7_gas_station" />
+				<!-- <symbol src="7_gas_station" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 			<m v="hospital" k="name" zoom-min="16">
-				<symbol src="13_hospital" />
+				<!-- <symbol src="13_hospital" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 			<m v="library" k="name" zoom-min="18">
-				<symbol src="10_library" />
+				<!-- <symbol src="10_library" /> -->
 				<!--<text use="poi-label" />-->
 			</m>
 			<m v="parking" zoom-min="17">
-				<symbol src="30_parking" />
+				<!-- <symbol src="30_parking" /> -->
 			</m>
 			<m v="pharmacy" k="name" zoom-min="18">
-				<symbol src="14_pharmacy" />
+				<!-- <symbol src="14_pharmacy" /> -->
 				<!--<text use="poi-label" />-->
 			</m>
 			<m v="place_of_worship" zoom-min="18">
 				<m k="denomination|religion" v="jewish">
-					<symbol src="18_spiritual_center" />
+					<!-- <symbol src="18_spiritual_center" /> -->
 					<m zoom-min="17">
 						<!--<text use="poi-label" />-->
 					</m>
 				</m>
 				<m k="denomination|religion" v="muslim|moslem">
-					<symbol src="18_spiritual_center" />
+					<!-- <symbol src="18_spiritual_center" /> -->
 					<m zoom-min="17">
 						<!--<text use="poi-label" />-->
 					</m>
 				</m>
 				<m k="denomination|religion" v="christian">
-					<symbol src="20_church" />
+					<!-- <symbol src="20_church" /> -->
 					<m zoom-min="17">
 						<!--<text use="poi-label" />-->
 					</m>
 				</m>
 			</m>
 			<m v="post_box" zoom-min="18">
-				<symbol src="12_post_office" />
+				<!-- <symbol src="12_post_office" /> -->
 			</m>
 			<m v="post_office" zoom-min="16">
-				<symbol src="12_post_office" />
+				<!-- <symbol src="12_post_office" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 			<m v="pub|bar" zoom-min="16">
-				<symbol src="23_bar" />
+				<!-- <symbol src="23_bar" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 			<m v="restaurant" zoom-min="16">
-				<symbol src="22_restaurant" />
+				<!-- <symbol src="22_restaurant" /> -->
 				<m zoom-min="17">
 					<!--<text use="poi-label" />-->
 				</m>
 			</m>
 			<m v="school" zoom-min="18">
-				<symbol src="11_school" />
+				<!-- <symbol src="11_school" /> -->
 				<!--<text use="poi-label" />-->
 			</m>
 			<m v="theatre" zoom-min="18">
-				<symbol src="17_movie_theatre" />
+				<!-- <symbol src="17_movie_theatre" /> -->
 				<!--<text use="poi-label" />-->
 			</m>
 			<m v="toilets" zoom-min="18">
-				<symbol src="21_toilet" />
+				<!-- <symbol src="21_toilet" /> -->
 			</m>
 			<m v="university|college" zoom-min="18">
-				<symbol src="11_school" />
+				<!-- <symbol src="11_school" /> -->
 				<!--<text use="poi-label" />-->
 			</m>
 		</m>
@@ -1024,16 +1024,16 @@
 	<m k="kind">
 		<m select="first">
 			<m v="cave_entrance" zoom-min="20">
-				<symbol src="" />
+				<!-- <symbol src="" /> -->
 			</m>
 			<m v="peak" zoom-min="20">
-				<symbol src="" />
+				<!-- <symbol src="" /> -->
 			</m>
 			<m v="tree" zoom-min="20">
-				<symbol src="" />
+				<!-- <symbol src="" /> -->
 			</m>
 			<m v="volcano" zoom-min="20">
-				<symbol src="" />
+				<!-- <symbol src="" /> -->
 			</m>
 		</m>
 	</m>
@@ -1160,11 +1160,11 @@
 
 	<m k="kind">
 		<m k="kind" v="crossing" zoom-min="18">
-			<symbol src="railway-crossing-small" />
+			<!-- <symbol src="railway-crossing-small" /> -->
 		</m>
 		<!-- in Bremen this is also used for crossings between tram-lines and roads... -->
 		<m k="kind" v="level_crossing" zoom-min="18">
-			<symbol src="railway-crossing" />
+			<!-- <symbol src="railway-crossing" /> -->
 		</m>
 		<m k="kind" v="station" zoom-min="18">
 			<circle r="6" fill="#ec2d2d" stroke="#606060" stroke-width="1.5" />
@@ -1178,40 +1178,40 @@
 
 	<m k="shop">
 		<m v="bakery" zoom-min="16">
-			<symbol src="22_restaurant" />
+			<!-- <symbol src="22_restaurant" /> -->
 			<m zoom-min="17">
 				<!--<text use="poi-label" />-->
 			</m>
 		</m>
 		<m v="florist" zoom-min="18">
-			<symbol src="" />
+			<!-- <symbol src="" /> -->
 		</m>
 		<m v="supermarket|organic" zoom-min="18">
-			<symbol src="" />
+			<!-- <symbol src="" /> -->
 		</m>
 	</m>
 
 	<m k="kind" zoom-min="18">
 		<m v="alpine_hut">
-			<symbol src="" />
+			<!-- <symbol src="" /> -->
 		</m>
 		<m v="camp_site">
-			<symbol src="" />
+			<!-- <symbol src="" /> -->
 		</m>
 		<m v="hostel">
-			<symbol src="" />
+			<!-- <symbol src="" /> -->
 		</m>
 		<m zoom-min="16" v="hotel">
-			<symbol src="8_hotel" />
+			<!-- <symbol src="8_hotel" /> -->
 			<m zoom-min="17">
 				<!--<text use="poi-label" />-->
 			</m>
 		</m>
 		<m v="information">
-			<symbol src="31_information" />
+			<!-- <symbol src="31_information" /> -->
 		</m>
 		<m v="viewpoint">
-			<symbol src="" />
+			<!-- <symbol src="" /> -->
 		</m>
 	</m>
 </rendertheme>
