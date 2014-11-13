@@ -278,6 +278,14 @@
 				<line stroke="#243F3F" width="0.1" />
 			</m>
 			<m v="riverbank">
+				<!--
+					Account for potentially overlapping riverbank tiles with identical properties, except where one has a `name`
+					key and the other doesn't. See the 18/76454/99215 tile.
+				-->
+				<m k="name">
+					<area src="patterns/water_texture.png" fill="#8DB4B7"/>
+					<line stroke="#243F3F" width="0.1" />
+				</m>
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
 				<line stroke="#243F3F" width="0.1" />
 			</m>
