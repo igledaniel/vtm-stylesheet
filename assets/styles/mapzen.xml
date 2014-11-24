@@ -43,6 +43,7 @@
 	<style-line id="fix" width="1.0" cap="butt" fix="true" />
 
 	<style-line id="park-line" stroke="#94af89" width="0.2" cap="butt" />
+	<style-line id="park-2-line" stroke="#9ca070" width="0.2" cap="butt" />
 
 	<style-text id="water-label-sm" k="name" size="18" fill="#294d6b" stroke-width="0.5" />
 	<style-text id="water-label-md" k="name" size="24" fill="#294d6b" stroke-width="1.0" />
@@ -58,7 +59,7 @@
 
 	<style-text id="poi-label" k="name" size="16" fill="#000000" stroke="#e8ecd3" stroke-width="0.5" dy="2" dx="2" text-align="center" />
 	<style-area id="park" fill="#afcfa2" />
-	<style-area id="park-2" src="patterns/park_texture_2.png" />
+	<style-area id="park-2" src="patterns/park_texture.png" />
 
 	<!-- ways -->
 	<m e="way">
@@ -66,7 +67,7 @@
 		<m select="first">
 			<m v="military" fade="9">
 				<area use="park-2"/>
-				<line use="park-line" />
+				<line use="park-line-2" />
 			</m>
 			<m k="kind" v="residential|farmyard" fade="9">
 				<area use="park"/>
@@ -100,7 +101,7 @@
 			</m>
 			<m v="allotments|village_green|recreation_ground" fade="9">
 				<area use="park-2"/>
-				<line use="park-line" />
+				<line use="park-line-2" />
 			</m>
 			<m v="reservoir|basin">
 				<area fill="#8db3b6" stroke="#6F9D9E" stroke-width="0.2" />
@@ -201,7 +202,7 @@
 			<m v="golf_course|common|green" fade="9">
 				<area use="park-2"/>
 				<m zoom-min="11">
-					<line stroke="#94af89" width="0.3" cap="butt" />
+					<line stroke="#9ca070" width="0.3" cap="butt" />
 				</m>
 				<m zoom-min="15">
 					<text use="park-label" />
@@ -218,7 +219,7 @@
 			</m>
 			<m v="stadium" fade="9">
 				<area use="park-2"/>
-				<line use="park-line" />
+				<line use="park-line-2" />
 				<m zoom-min="15">
 					<text use="park-label" />
 				</m>
@@ -268,7 +269,7 @@
 			<m v="canal" zoom-min="0">
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
 				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-				<m zoom-min="17">
+				<m zoom-min="18">
 					<caption k="name" size="18" fill="#294d6b" />
 				</m>
 			</m>
@@ -356,7 +357,7 @@
 				<line stroke="#94af89" width="0.2" cap="butt" />
 			</m>
 			<m k="name" zoom-min="16">
-				<text use="water-label" />
+				<text use="street-label-sm" />
 				<!-- <symbol src="6_park" /> -->
 			</m>
 		</m>
@@ -603,7 +604,7 @@
 							</m>
 							<m v="primary_link" zoom-min="9">
 								<line use="primary" />
-								<m zoom-min="11">
+								<m zoom-min="12">
 									<text use="street-label-sm" />
 								</m>
 								<m zoom-min="16">>
@@ -619,7 +620,7 @@
 							</m>
 							<m v="secondary">
 								<line use="secondary" />
-								<m zoom-min="11">
+								<m zoom-min="12">
 									<text use="street-label-sm" />
 								</m>
 								<m zoom-min="16">>
@@ -627,7 +628,7 @@
 								</m>
 							</m>
 							<m v="primary">
-								<m zoom-min="11">
+								<m zoom-min="12">
 									<line use="primary" />
 								</m>
 								<m zoom-min="14">
@@ -1207,20 +1208,20 @@
 			</m>
 		</m>
 
-		<m v="lake" zoom-min="15">
+		<m v="lake" zoom-min="17">
 			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
 
-		<m v="glacier" zoom-min="17">
+		<m v="glacier" zoom-min="18">
 			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
-		<m v="pond" zoom-min="17">
+		<m v="pond" zoom-min="18">
 			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
-		<m v="islet" zoom-min="17">
+		<m v="islet" zoom-min="18">
 			<text use="water-label-sm" />
 		</m>
-		<m v="beach" zoom-min="17">
+		<m v="beach" zoom-min="18">
 			<text use="water-label-sm" />
 		</m>
 	</m>
