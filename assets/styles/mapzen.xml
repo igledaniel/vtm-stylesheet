@@ -1,4 +1,4 @@
-<rendertheme xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme ../../rendertheme.xsd" version="1" map-background="#ebf0d8" >
+<rendertheme xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme ../../rendertheme.xsd" version="1" map-background="#e8ecd3" >
 	<!-- icons 32 -->
 	<atlas img="styles/poi_icons_32.png">
 		<rect id="1_airport" pos="0 0 32 32" />
@@ -35,31 +35,37 @@
 	</atlas>
 
 	<style-line id="trunk" stroke="#ebf0d8" width="1.5" />
-	<style-line id="motorway" stroke="#f3f7e6" width="3" cap="butt" priority="1"/>
-	<style-line id="primary" stroke="#f3f7e6" width="2" cap="butt" />
-	<style-line id="secondary" use="primary" width="-0.2" />
-	<style-line id="tertiary" use="primary" width="-0.9" />
-	<style-line id="motorway:z7" stroke="#d6dac2" width="0.8" cap="butt" faded="7" />
+	<style-line id="motorway" stroke="#C99272" width="2.25" cap="round" priority="0"/>
+	<style-line id="primary" stroke="#f3f7ef" width="2" cap="butt" priority="1"/>
+	<style-line id="secondary" stroke="#f3f7e6" width="1.75" cap="butt" priority="2"/>
+	<style-line id="tertiary" stroke="#f3f7e6" width="1" cap="butt" priority="3"/>
+	<style-line id="motorway:z7" stroke="#C99272" width="1.25" cap="butt" faded="7" priority="0" />
 	<style-line id="fix" width="1.0" cap="butt" fix="true" />
 
-	<style-line id="park-line" stroke="#898b61" width="0.2" cap="butt" />
+	<style-line id="park-line" stroke="#94af89" width="0.2" cap="butt" />
 
-	<!-- <style-text id="water-label" k="name" size="16" fill="#45797e" stroke-width="2.0" /> -->
-	<style-text id="park-label" k="name" size="18" fill="#38678f" stroke="#e8ecd3" stroke-width="1.0" priority="4" />
+	<style-text id="water-label-sm" k="name" size="18" fill="#294d6b" stroke-width="0.5" />
+	<style-text id="water-label-md" k="name" size="24" fill="#294d6b" stroke-width="1.0" />
+	<style-text id="water-label-lg" k="name" size="28" fill="#294d6b" stroke-width="1.25" />
+	<style-text id="park-label" k="name" size="21" fill="#42513a" stroke="#e8ecd3" stroke-width="0.5" />
 
-	<style-text id="street-label-sm" k="name" size="16" fill="#294d6b" stroke="#e4e9cc" stroke-width="2.0" priority="3" />
-	<style-text id="street-label" k="name" size="20" style="bold"  character-spacing="0.3" fill="#294d6b" stroke="#e4e9cc" stroke-width="2.0" priority="2" />
-	<style-text id="street-label-lg" k="name" size="28" fill="#294d6b" stroke="#e4e9cc" stroke-width="2.0" priority="1" />
+	<style-text id="street-label-sm" k="name" size="18" fill="#666666" stroke="#e4e9cc" stroke-width="1.0" priority="3" />
+	<style-text id="street-label-md" k="name" size="24" fill="#666666" stroke="#e4e9cc" stroke-width="2.0" priority="3" />
+	<style-text id="street-label-b" k="name" size="21" style="bold"  character-spacing="0.3" fill="#666666" stroke="#e4e9cc" stroke-width="1.0" priority="2" />
+	<style-text id="street-label-lg" k="name" size="28" fill="#666666" stroke="#e4e9cc" stroke-width="2.0" priority="1" />
+	<style-text id="street-label-lg-b" k="name" size="28" style="bold"  character-spacing="0.3" fill="#666666" stroke="#e4e9cc" stroke-width="2.0" priority="1" />
+	<style-text id="street-label-sm-i" k="name" size="18" style="italic" fill="#666666" stroke="#e4e9cc" stroke-width="1.0" priority="3" />
 
 	<style-text id="poi-label" k="name" size="16" fill="#000000" stroke="#e8ecd3" stroke-width="0.5" dy="2" dx="2" text-align="center" />
-	<style-area id="park" src="patterns/park_texture.png" />
+	<style-area id="park" fill="#afcfa2" />
+	<style-area id="park-2" src="patterns/park_texture_2.png" />
 
 	<!-- ways -->
 	<m e="way">
 		<!-- parks, playgrounds + labels -->
 		<m select="first">
 			<m v="military" fade="9">
-				<area use="park"/>
+				<area use="park-2"/>
 				<line use="park-line" />
 			</m>
 			<m k="kind" v="residential|farmyard" fade="9">
@@ -76,7 +82,7 @@
 				<area fill="#ebf0d8" stroke="#ebf0d8" stroke-width="0.2" />
 			</m>
 			<m v="construction|greenfield">
-				<area fill="#a47c41" stroke="#ebf0d8" stroke-width="0.2" />
+				<area fill="#e8ecd3" stroke="#ebf0d8" stroke-width="0.2" />
 			</m>
 			<m v="garages">
 				<area fill="#d6d6e4" />
@@ -93,11 +99,11 @@
 				<line use="park-line" />
 			</m>
 			<m v="allotments|village_green|recreation_ground" fade="9">
-				<area use="park"/>
+				<area use="park-2"/>
 				<line use="park-line" />
 			</m>
 			<m v="reservoir|basin">
-				<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.2" />
+				<area fill="#8db3b6" stroke="#6F9D9E" stroke-width="0.2" />
 			</m>
 		</m>
 		<m k="name" zoom-min="18">
@@ -134,7 +140,7 @@
 					</m>
 				</m>
 				<m v="fountain" closed="yes">
-					<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.15" />
+					<area fill="#8db3b6" stroke="#6F9D9E" stroke-width="0.15" />
 				</m>
 				<m v="hospital" zoom-min="16">
 					<!-- <symbol src="13_hospital" /> -->
@@ -155,13 +161,13 @@
 					<line stroke="#708599" fix="true" cap="butt" width="2.0" />
 				</m>
 				<m closed="yes">
-					<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.4" />
+					<area fill="#8db3b6" stroke="#6F9D9E" stroke-width="0.4" />
 				</m>
 			</m>
 		</m>
 		<m zoom-min="10">
 			<m v="glacier">
-				<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.8" />
+				<area fill="#8db3b6" stroke="#6F9D9E" stroke-width="0.8" />
 			</m>
 			<m v="land">
 				<area fill="#f8f8f8" stroke="#e0e0e0" stroke-width="0.1" />
@@ -183,10 +189,19 @@
 		<!-- leisure -->
 		<m k="kind">
 			<!-- park labels -->
-			<m v="park|garden|golf_course|common|green" fade="9">
+			<m v="park|garden" fade="9">
 				<area use="park"/>
 				<m zoom-min="11">
-					<line stroke="#898b61" width="0.3" cap="butt" />
+					<line stroke="#94af89" width="0.3" cap="butt" />
+				</m>
+				<m zoom-min="15">
+					<text use="park-label" />
+				</m>
+			</m>
+			<m v="golf_course|common|green" fade="9">
+				<area use="park-2"/>
+				<m zoom-min="11">
+					<line stroke="#94af89" width="0.3" cap="butt" />
 				</m>
 				<m zoom-min="15">
 					<text use="park-label" />
@@ -197,14 +212,14 @@
 					<area use="park"/>
 				</m>
 				<m zoom-min="17">
-					<line stroke="#898b61" width="0.3" cap="butt" />
+					<line stroke="#94af89" width="0.3" cap="butt" />
 					<text use="park-label" />
 				</m>
 			</m>
 			<m v="stadium" fade="9">
-				<area use="park"/>
+				<area use="park-2"/>
 				<line use="park-line" />
-				<m zoom-min="17">
+				<m zoom-min="15">
 					<text use="park-label" />
 				</m>
 			</m>
@@ -236,46 +251,49 @@
 			<!-- waterway casings -->
 			<m v="water" zoom-min="0">
 				<area src="patterns/water_texture.png" fill="#8DB4B7" />
-				<line stroke="#243F3F" width="0.25" cap="butt" />
+				<line stroke="#6F9D9E" width="0.25" cap="butt" />
 				<m zoom-min="13">
-					<!-- <caption k="name" size="18" fill="#373737" /> -->
+					<caption k="name" size="18" fill="#294d6b" />
 				</m>
 			</m>
 
 			<!-- waterway cores -->
 			<m v="ditch">
-				<line stroke="#243F3F" width="0.2" />
+				<line stroke="#6F9D9E" width="0.2" />
 			</m>
 			<m v="drain">
-				<line stroke="#243F3F" width="0.2" fix="true" fade="13" />
+				<line stroke="#6F9D9E" width="0.2" fix="true" fade="13" />
 			</m>
 			<!-- canal zoom levels -->
 			<m v="canal" zoom-min="0">
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#243F3F" width="0.25" cap="butt" />
-				<m zoom-min="16">
-					<caption k="name" size="18" fill="#373737" />
+				<line stroke="#6F9D9E" width="0.25" cap="butt" />
+				<m zoom-min="17">
+					<caption k="name" size="18" fill="#294d6b" />
 				</m>
 			</m>
 
 			<!-- stream zoom levels -->
 			<m v="stream">
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#243F3F" width="0.25" cap="butt" />
+				<line stroke="#6F9D9E" width="0.25" cap="butt" />
 			</m>
 
 			<!-- river zoom levels -->
 			<m v="river" select="first">
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#243F3F" width="0.25" cap="butt" />
-				<m v="river" zoom-min="14">
-					<text use="street-label-sm" />
+				<line stroke="#6F9D9E" width="0.25" cap="butt" />
+				<m zoom-min="12">
+					<text use="water-label-sm" />
+				</m>
+				<m zoom-min="17">
+					<text use="water-label-md" />
 				</m>
 			</m>
 
 			<m v="dock">
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#243F3F" width="0.1" />
+				<line stroke="#6F9D9E" width="0.1" />
 			</m>
 			<m v="riverbank">
 				<!--
@@ -284,44 +302,44 @@
 				-->
 				<m k="name">
 					<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-					<line stroke="#243F3F" width="0.1" />
+					<line stroke="#6F9D9E" width="0.1" />
 				</m>
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#243F3F" width="0.1" />
+				<line stroke="#6F9D9E" width="0.1" />
 			</m>
 			<m v="weir">
-				<line stroke="#243F3F" width="0.1" />
+				<line stroke="#6F9D9E" width="0.1" />
 			</m>
 			<m v="dam">
-				<line stroke="#243F3F" width="0.1" />
+				<line stroke="#6F9D9E" width="0.1" />
 			</m>
 			<m k="kind" v="yes|true">
-				<line stroke="#243F3F" width="0.1" cap="round" />
+				<line stroke="#6F9D9E" width="0.1" cap="round" />
 			</m>
 		</m>
 
 		<!-- military -->
 		<m k="military">
 			<area use="park"/>
-			<line stroke="#898b61" width="0.2" cap="butt" />
-			<caption k="name" size="18" fill="#373737" />
+			<line stroke="#94af89" width="0.2" cap="butt" />
+			<caption k="name" size="18" fill="#42513a" />
 		</m>
 
 		<!-- sport -->
 		<m k="sport">
 			<m v="soccer">
 				<area use="park"/>
-				<line stroke="#898b61" width="0.2" cap="butt" />
+				<line stroke="#94af89" width="0.2" cap="butt" />
 				<m zoom-min="17">
 					<!-- <symbol src="27_soccer" /> -->
 				</m>
 			</m>
 			<m v="swimming|canoe|diving|scuba_diving">
-				<area fill="#8db3b6" stroke="#243F3F" stroke-width="0.2" />
+				<area fill="#8db3b6" stroke="#6F9D9E" stroke-width="0.2" />
 			</m>
 			<m v="tennis">
 				<area use="park"/>
-				<line stroke="#898b61" width="0.2" cap="butt" />
+				<line stroke="#94af89" width="0.2" cap="butt" />
 				<m zoom-min="17">
 					<!-- <symbol src="26_sports" /> -->
 				</m>
@@ -330,12 +348,12 @@
 
 		<!-- tourism areas -->
 		<m k="kind">
-			<m v="attraction">
+			<!-- <m v="attraction">
 				<area fill="#f2caea" />
-			</m>
+			</m> -->
 			<m v="zoo|picnic_site|caravan_site|camp_site">
 				<area use="park"/>
-				<line stroke="#898b61" width="0.2" cap="butt" />
+				<line stroke="#94af89" width="0.2" cap="butt" />
 			</m>
 			<m k="name" zoom-min="16">
 				<text use="water-label" />
@@ -346,11 +364,11 @@
 		<!-- water stroke at different zoom levels -->
 		<m k="kind" v="water" zoom-min="0">
 			<area src="patterns/water_texture.png"/>
-			<line stroke="#243F3F" width="0.25" cap="butt" />
+			<line stroke="#6F9D9E" width="0.25" cap="butt" />
 		</m>
 
 		<m k="kind" v="coastline" closed="no">
-			<line stroke="#243F3F" fix="true" cap="butt" width="1.0" />
+			<line stroke="#6F9D9E" fix="true" cap="butt" width="1.0" />
 		</m>
 
 		<!-- tunnel -->
@@ -376,7 +394,7 @@
 				<m v="tertiary|secondary_link|primary_link|trunk_link|motorway_link|secondary|primary|trunk">
 					<line stipple-stroke="#A7A89B" width="2.6" stroke="#A7A89B" stipple="2" stipple-width="0" cap="round" fix="true" />
 					<m zoom-min="11">
-						<text use="street-label-sm" />
+						
 					</m>
 				</m>
 			</m>
@@ -457,7 +475,7 @@
 						</m>
 						<m v="footway|path">
 							<line stipple-stroke="#A7A89B" width="2.6" stroke="#00A7A89B" stipple="2" stipple-width="1.5" cap="round" fix="true" />
-							<text use="street-label-sm" />
+							<text use="street-label-sm-i" />
 						</m>
 					</m>
 				</m>
@@ -488,6 +506,25 @@
 		<outline-layer id="casing" stroke="#9f9f9f" width="0.2" cap="round" />
 		<outline-layer id="casing-bridge" stroke="#404040" width="0.25" cap="round" />
 
+		<!-- Motorway network styling -->
+		<m k="kind" v="highway">
+			<m k="highway" v="motorway">
+				<m zoom-min="7">
+					<line use="motorway:z7" />
+				</m>
+				<m zoom-min="9">
+					<line use="motorway:z7" width="+0.5" />
+				</m>
+				<m zoom-min="11">
+					<line use="motorway" />
+					<text use="water-label"/>
+				</m>
+				<m zoom-min="14">
+					<line use="motorway" width="+0.5" />
+					<text use="street-label-b" />
+				</m>
+			</m>
+		</m>
 		<m k="kind">
 			<m k="kind" v="~|no|false">
 				<m k="area" v="~|no|false" select="first">
@@ -567,11 +604,10 @@
 							<m v="primary_link" zoom-min="9">
 								<line use="primary" />
 								<m zoom-min="11">
-									<line use="primary" />
 									<text use="street-label-sm" />
 								</m>
-								<m zoom-min="16">
-									<line use="primary" />
+								<m zoom-min="16">>
+									<text use="street-label-md" />
 								</m>
 							</m>
 							<m v="trunk_link">
@@ -583,7 +619,12 @@
 							</m>
 							<m v="secondary">
 								<line use="secondary" />
-								<text use="street-label-sm" />
+								<m zoom-min="11">
+									<text use="street-label-sm" />
+								</m>
+								<m zoom-min="16">>
+									<text use="street-label-md" />
+								</m>
 							</m>
 							<m v="primary">
 								<m zoom-min="11">
@@ -591,11 +632,14 @@
 								</m>
 								<m zoom-min="14">
 									<line use="primary" />
-									<text use="water-label" />
+									<text use="street-label-b" />
 								</m>
 								<m zoom-min="16">
 									<line use="primary" outline="1" />
-									<text use="street-label" />
+								</m>
+								<m zoom-min="18">
+									<line use="primary" outline="1" />
+									<text use="street-label-lg-b" />
 								</m>
 							</m>
 							<m v="trunk">
@@ -603,22 +647,6 @@
 								<m zoom-min="16">
 									<line use="trunk" />
 									<text use="street-label-sm" />
-								</m>
-							</m>
-							<m v="motorway" sort_key="0">
-								<m zoom-min="7">
-									<line use="motorway:z7" />
-								</m>
-								<m zoom-min="9">
-									<line use="motorway:z7" width="+0.5" />
-								</m>
-								<m zoom-min="11">
-									<line use="motorway" />
-									<text use="water-label"/>
-								</m>
-								<m zoom-min="16">
-									<line use="motorway" />
-									<text use="street-label" />
 								</m>
 							</m>
 							<m select="when-matched">
@@ -791,8 +819,8 @@
 		</m>
 
 		<m k="kind" v="station">
-			<line stroke="#202020" width="0.4" cap="round" />
-			<line stroke="#202020" width="4.0" dasharray="2,200" cap="round" />
+			<line stroke="#e8ecd3" width="0.4" cap="round" />
+			<line stroke="#e8ecd3" width="4.0" dasharray="2,200" cap="round" />
 			<m k="kind" v="cable_car">
 				<!-- <symbol src="" /> -->
 			</m>
@@ -840,28 +868,32 @@
 					<line stroke="#e6e6e6" width="0.25" cap="butt" />
 					<line stroke="#dcdbb3" width="0.25" dasharray="18,18" cap="butt" />
 				</m>
-				<m k="kind" v="rail" zoom-min="14" priority="3">
-					<line stroke="#dcdbb3" width="4.0" cap="butt" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#f3f7e6" />
+				<m k="kind" v="rail" zoom-min="16">
+					<line stroke="#dcdbb3" width="3.0" cap="butt" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#f3f7e6" />
 				</m>
 			</m>
 		</m>
 
+		<!-- Admin boundaries -->
 		<m k="kind">
 			<m v="national_park">
 				<line stroke="#000000" width="0.75" fix="true" dasharray="15, 5, 5, 5" />
 			</m>
 			<m v="administrative">
 				<m k="admin_level">
-					<m v="4" zoom-min="3" zoom-max="9">
-						<line stroke="#6da1a5" width="1.0" fix="true" stipple="4" stipple-width="0.9" stipple-stroke="#e8ecd3"
+					<m v="4" zoom-min="7" zoom-max="11"><!-- States -->
+						<line stroke="#686854" width="1.5" cap="round" stipple="5" stipple-width="1.15" stipple-stroke="#e8ecd3" />
+					</m>
+					<m v="4" zoom-min="4" zoom-max="6"><!-- States -->
+						<line stroke="#9ca070" width="1.25" cap="round" />
+					</m>
+					
+					<m v="3" zoom-min="1" zoom-max="7"><!-- Countries -->
+						<line stroke="#294d6b" width="1.2" fix="true" stipple="6" stipple-width="0.9" stipple-stroke="#e8ecd3"
 						dasharray="10, 5, 5, 5" />
 					</m>
-					<m v="3" zoom-min="1" zoom-max="4">
-						<line stroke="#465b73" width="0.75" fix="true" stipple="4" stipple-width="0.9" stipple-stroke="#e8ecd3"
-						dasharray="10, 5, 5, 5" />
-					</m>
-					<m v="2" zoom-min="1" zoom-max="2">
-						<line stroke="#000000" width="1.0" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#e8ecd3"
+					<m v="2" zoom-min="0" zoom-max="2">
+						<line stroke="#000000" width="1.5" fix="true" stipple="3" stipple-width="0.6" stipple-stroke="#e8ecd3"
 						dasharray="10, 5, 5, 5" />
 					</m>
 				</m>
@@ -1049,15 +1081,18 @@
 	<!--  labels -->
 	<m k="kind" first="true">
 		<m v="continent" zoom-min="0" zoom-max="2">
-			<caption k="name" style="bold" size="18" fill="#38678F" priority="0" />
+			<caption k="name" size="24" fill="#444444" priority="0" />
 		</m>
 
 		<m v="country" zoom-max="7">
 			<m zoom-min="3">
-				<caption k="name" style="bold" size="16" fill="#38678f" priority="0" />
+				<caption k="name" style="bold" size="18" fill="#444444" priority="0" />
+			</m>
+			<m zoom-min="4">
+				<caption k="name" style="bold" size="21" fill="#444444" priority="0" />
 			</m>
 			<m zoom-min="5">
-				<caption k="name" style="bold" size="22" fill="#38678f" priority="0" />
+				<caption k="name" style="bold" size="26" fill="#444444" priority="0" />
 			</m>
 		</m>
 
@@ -1065,27 +1100,51 @@
 			<m zoom-min="0">
 				<caption k="name" style="italic" size="18" fill="#002d54" priority="1" />
 			</m>
-			<m zoom-min="5">
+			<m zoom-min="3">
+				<caption k="name" style="italic" size="21" fill="#002d54" priority="1" />
+			</m>
+			<m zoom-min="4">
 				<caption k="name" style="italic" size="24" fill="#002d54" priority="1" />
+			</m>
+			<m zoom-min="5">
+				<caption k="name" style="italic" size="26" fill="#002d54" priority="1" />
+			</m>
+		</m>
+
+		<m v="sea" >
+			<m zoom-min="3">
+				<caption k="name" style="italic" size="18" fill="#294d6b" priority="2" />
+			</m>
+			<m zoom-min="5">
+				<caption k="name" style="italic" size="21" fill="#294d6b" priority="2" />
 			</m>
 		</m>
 
 		<m v="archipelago" zoom-min="4" zoom-max="9">
-			<caption k="name" size="16" fill="#38678F" priority="0" />
+			<caption k="name" size="16" fill="#444444" priority="0" />
 		</m>
-		<m v="sea" zoom-min="4">
+		<m v="sea" zoom-min="5">
 			<caption k="name" style="italic" size="14" fill="#002d54" priority="3" />
 		</m>
 
 		<m v="state">
+			<m zoom-min="4">
+				<caption k="name" size="16" fill="#666666" priority="3"/>
+			</m>
 			<m zoom-min="5">
-				<caption k="name" size="16" fill="#38678F" priority="3" />
+				<caption k="name" size="18" fill="#666666" priority="3" />
+			</m>
+			<m zoom-min="6">
+				<caption k="name" size="20" fill="#666666" priority="3" />
 			</m>
 			<m zoom-min="7">
-				<caption k="name" size="22" fill="#38678F" priority="3" />
+				<caption k="name" size="22" fill="#666666" stroke="#e8ecd3" stroke-width="1.0" priority="3" />
+			</m>
+			<m zoom-min="8">
+				<caption k="name" size="30" fill="#666666" priority="3" />
 			</m>
 			<m zoom-min="9" zoom-max="11">
-				<caption k="name" size="28" fill="#38678F" priority="3" />
+				<caption k="name" size="32" fill="#444444" stroke="#e8ecd3" stroke-width="1.25" priority="3" />
 			</m>
 		</m>
 
@@ -1098,24 +1157,24 @@
 			</m>
 		</m>
 
-		<m v="city" zoom-max="13">
+		<m v="city" zoom-max="14">
 			<m zoom-min="7">
-				<caption k="name" size="14" fill="#38678f" stroke="#e8ecd3" stroke-width="0.75" priority="3" />
+				<caption k="name" size="18" fill="#666666" stroke="#e8ecd3" stroke-width="0.75" priority="3" />
 			</m>
 			<m zoom-min="9">
-				<caption k="name" size="20" fill="#38678f" stroke="#e8ecd3" stroke-width="1.5" priority="3" />
+				<caption k="name" size="21" fill="#666666" stroke="#e8ecd3" stroke-width="1.0" priority="3" />
 			</m>
 			<m zoom-min="11">
-				<caption k="name" size="24" fill="#38678f" stroke="#e8ecd3" stroke-width="1.5" priority="3" />
+				<caption k="name" size="24" fill="#444444" stroke="#e8ecd3" stroke-width="1.25" priority="3" />
 			</m>
 		</m>
 
 		<m v="bay" zoom-min="11">
-			<caption k="name" style="italic" size="14" fill="#002d54" priority="3" />
+			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
 
 		<m v="town" zoom-min="11" zoom-max="15">
-			<caption k="name" size="14" fill="#294d6b" stroke="#e8ecd3" stroke-width="2" priority="3" />
+			<caption k="name" size="14" fill="#593d2f" stroke="#e8ecd3" stroke-width="1" priority="3" />
 		</m>
 		<m v="village" zoom-min="11" zoom-max="15">
 			<caption k="name" size="14" fill="#1b3246" stroke="#e8ecd3" stroke-width="2" priority="3" />
@@ -1133,36 +1192,36 @@
 			<caption k="name" size="14" fill="#294d6b" stroke="#e8ecd3" stroke-width="2" priority="3" />
 		</m>
 		<m v="gulf" zoom-min="11">
-			<caption k="name" style="italic" size="14" fill="#002d54" priority="3" />
+			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
 
 		<m v="hamlet" zoom-min="11" zoom-max="16">
 			<caption k="name" size="14" fill="#427aa9" stroke="#e4e9cc" stroke-width="2" priority="3" />
 		</m>
 		<m v="suburb|neighbourhood|quarter|borough" zoom-max="16">
-			<m zoom-min="12">
-				<caption k="name" size="18" fill="#427aa9" stroke="#e4e9cc" stroke-width="1" priority="5" />
+			<m zoom-min="11">
+				<caption k="name" size="18" fill="#593d2f" stroke="#e4e9cc" stroke-width="0.5" priority="5" />
 			</m>
 			<m zoom-min="14">
-				<caption k="name" size="24" fill="#427aa9" stroke="#e4e9cc" stroke-width="1.5" priority="5" />
+				<caption k="name" size="24" fill="#593d2f" stroke="#e4e9cc" stroke-width="0.5" priority="5" />
 			</m>
 		</m>
 
-		<m v="lake" zoom-min="13">
-			<caption k="name" style="italic" size="14" fill="#002d54" priority="3" />
+		<m v="lake" zoom-min="15">
+			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
 
-		<m v="glacier" zoom-min="16">
-			<caption k="name" style="italic" size="14" fill="#002d54" priority="3" />
+		<m v="glacier" zoom-min="17">
+			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
-		<m v="pond" zoom-min="16">
-			<caption k="name" style="italic" size="14" fill="#002d54" priority="3" />
+		<m v="pond" zoom-min="17">
+			<caption k="name" style="italic" size="14" fill="#294d6b" priority="3" />
 		</m>
-		<m v="islet" zoom-min="16">
-			<text use="city-label" />
+		<m v="islet" zoom-min="17">
+			<text use="water-label-sm" />
 		</m>
-		<m v="beach" zoom-min="16">
-			<text use="city-label" />
+		<m v="beach" zoom-min="17">
+			<text use="water-label-sm" />
 		</m>
 	</m>
 
