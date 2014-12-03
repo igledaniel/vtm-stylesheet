@@ -284,12 +284,6 @@
 			<m v="river" select="first">
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
 				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-				<m zoom-min="12">
-					<text use="water-label-sm" />
-				</m>
-				<m zoom-min="17">
-					<text use="water-label-md" />
-				</m>
 			</m>
 
 			<m v="dock">
