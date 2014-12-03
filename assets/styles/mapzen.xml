@@ -868,6 +868,7 @@
 				</m>
 				<m k="kind" v="rail" zoom-min="16">
 					<line stroke="#dcdbb3" width="3.0" cap="butt" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#f3f7e6" />
+					<symbol src="3_train" />
 				</m>
 			</m>
 		</m>
