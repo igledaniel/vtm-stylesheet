@@ -1230,6 +1230,9 @@
 		</m>
 		<m k="kind" v="station" zoom-min="18">
 			<circle r="6" fill="#ec2d2d" stroke="#606060" stroke-width="1.5" />
+			<m zoom-min="15">
+				<symbol src="3_train" />
+			</m>
 			<!-- <caption k="name" dy="-10" style="bold" size="13" fill="#ec2d2d" stroke="#ffffff" stroke-width="2.0" /> -->
 		</m>
 		<m k="kind" v="halt|tram_stop" zoom-min="18">
