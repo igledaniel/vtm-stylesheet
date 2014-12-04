@@ -284,12 +284,6 @@
 			<m v="river" select="first">
 				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
 				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-				<m zoom-min="12">
-					<text use="water-label-sm" />
-				</m>
-				<m zoom-min="17">
-					<text use="water-label-md" />
-				</m>
 			</m>
 
 			<m v="dock">
@@ -860,6 +854,9 @@
 				<m k="kind" v="subway" priority="3">
 					<line stroke="#dcdbb3" width="0.4" zoom-min="15"/>
 					<line stroke="#dcdbb3" width="0.25" dasharray="4,2" cap="round" />
+					<m zoom-min="15">
+						<symbol src="3_train" />
+					</m>
 				</m>
 				<m k="kind" v="light_rail" zoom-min="14" priority="3">
 					<line stroke="#dcdbb3" width="4.0" cap="butt" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#f3f7e6" />
@@ -871,6 +868,7 @@
 				</m>
 				<m k="kind" v="rail" zoom-min="16">
 					<line stroke="#dcdbb3" width="3.0" cap="butt" fix="true" stipple="6" stipple-width="0.6" stipple-stroke="#f3f7e6" />
+					<symbol src="3_train" />
 				</m>
 			</m>
 		</m>
@@ -1236,6 +1234,9 @@
 		</m>
 		<m k="kind" v="station" zoom-min="18">
 			<circle r="6" fill="#ec2d2d" stroke="#606060" stroke-width="1.5" />
+			<m zoom-min="15">
+				<symbol src="3_train" />
+			</m>
 			<!-- <caption k="name" dy="-10" style="bold" size="13" fill="#ec2d2d" stroke="#ffffff" stroke-width="2.0" /> -->
 		</m>
 		<m k="kind" v="halt|tram_stop" zoom-min="18">
