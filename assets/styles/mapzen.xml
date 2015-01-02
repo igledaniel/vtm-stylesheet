@@ -180,7 +180,7 @@
 		<!-- leisure -->
 		<m k="kind">
 			<!-- park labels -->
-			<m v="park|garden" fade="9">
+			<m v="park|park or protected land|garden" fade="9">
 				<area use="park"/>
 				<m zoom-min="11">
 					<line stroke="#94af89" width="0.3" cap="butt" />
