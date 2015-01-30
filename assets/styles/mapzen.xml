@@ -111,12 +111,12 @@
 			<text use="park-label" />
 		</m>
 
-		<m k="natural" v="forest|wood|scrub">
-			<m k="wood" v="coniferous|deciduous|mixed" fade="9">
+		<m k="kind" v="forest|wood|scrub">
+			<m k="kind" v="coniferous|deciduous|mixed" fade="9">
 				<area use="park"/>
 				<line use="park-line" />
 			</m>
-			<m k="wood" v="~" fade="9">
+			<m k="kind" v="wood" fade="9">
 				<area use="park"/>
 			</m>
 			<m zoom-min="15">
