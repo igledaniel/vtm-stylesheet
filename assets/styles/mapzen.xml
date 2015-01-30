@@ -226,9 +226,6 @@
 					<line stroke="#e8ecd3" width="0.75" />
 				</m>
 			</m>
-			<m v="swimming_pool">
-				<area src="patterns/water_texture.png" fill="#8DB4B7" />
-			</m>
 		</m>
 		<m k="leisure|kind" zoom-min="14">
 			<m v="nature_reserve" fade="9">
@@ -237,68 +234,60 @@
 			</m>
 		</m>
 
-		<!-- waterways -->
-		<m k="kind">
-			<!-- waterway casings -->
-			<m v="water" zoom-min="0">
-				<area src="patterns/water_texture.png" fill="#8DB4B7" />
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-			</m>
-
-			<!-- waterway cores -->
-			<m v="ditch">
-				<line stroke="#6F9D9E" width="0.2" />
-			</m>
-			<m v="drain">
-				<line stroke="#6F9D9E" width="0.2" fix="true" fade="13" />
-			</m>
-			<!-- canal zoom levels -->
-			<m v="canal" zoom-min="0">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-				<m zoom-min="18">
-					<caption k="name" size="18" fill="#294d6b" />
-				</m>
-			</m>
-
-			<!-- stream zoom levels -->
-			<m v="stream">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-			</m>
-
-			<!-- river zoom levels -->
-			<m v="river" select="first">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-			</m>
-
-			<m v="dock">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m v="riverbank">
-				<!--
-					Account for potentially overlapping riverbank tiles with identical properties, except where one has a `name`
-					key and the other doesn't. See the 18/76454/99215 tile.
-				-->
-				<m k="name">
-					<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-					<line stroke="#6F9D9E" width="0.1" />
-				</m>
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m v="weir">
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m v="dam">
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m k="kind" v="yes|true">
-				<line stroke="#6F9D9E" width="0.1" cap="round" />
-			</m>
-		</m>
+        <!-- waterways -->
+        <m k="layer_name" v="water">
+            <m k="geometry_type" v="Polygon">
+                <area src="patterns/water_texture.png" fill="#8DB4B7" />
+            </m>
+            <!-- waterway casings -->
+            <m k="kind" v="water">
+                <line stroke="#6F9D9E" width="2" cap="butt" />
+            </m>
+            <!-- waterway cores -->
+            <m k="kind" v="ditch">
+                <line stroke="#6F9D9E" width="0.2" />
+            </m>
+            <m k="kind" v="drain">
+                <line stroke="#6F9D9E" width="0.2" fix="true" />
+            </m>
+            <!-- canal zoom levels -->
+            <m k="kind" v="canal">
+                <line stroke="#6F9D9E" width="1" cap="butt" />
+                <m zoom-min="18">
+                    <caption k="name" size="18" fill="#294d6b" />
+                </m>
+            </m>
+            <!-- stream zoom levels -->
+            <m k="kind" v="stream">
+                <line stroke="#6F9D9E" width="1" cap="butt" />
+            </m>
+            <!-- river zoom levels -->
+            <m k="kind" v="river">
+                <line stroke="#6F9D9E" width="1" cap="butt" />
+            </m>
+            <m k="kind" v="dock">
+                <line stroke="#6F9D9E" width="0.1" />
+            </m>
+            <m k="kind" v="riverbank">
+                <!--
+                Account for potentially overlapping riverbank tiles with identical properties, except where one has a `name`
+                key and the other doesn't. See the 18/76454/99215 tile.
+                -->
+                <m k="name">
+                    <line stroke="#6F9D9E" width="0.1" />
+                </m>
+                <line stroke="#6F9D9E" width="0.1" />
+            </m>
+            <m k="kind" v="weir">
+                <line stroke="#6F9D9E" width="0.1" />
+            </m>
+            <m k="kind" v="dam">
+                <line stroke="#6F9D9E" width="0.1" />
+            </m>
+            <m k="kind" v="yes|true">
+                <line stroke="#6F9D9E" width="0.1" cap="round" />
+            </m>
+        </m>
 
 		<!-- military -->
 		<m k="military">
@@ -334,12 +323,6 @@
 			<m k="name" zoom-min="16">
 				<text use="street-label-sm" />
 			</m>
-		</m>
-
-		<!-- water stroke at different zoom levels -->
-		<m k="kind" v="water" zoom-min="0">
-			<area src="patterns/water_texture.png"/>
-			<line stroke="#6F9D9E" width="0.25" cap="butt" />
 		</m>
 
 		<m k="kind" v="coastline" closed="no">
