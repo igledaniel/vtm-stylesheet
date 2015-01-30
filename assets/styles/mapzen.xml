@@ -57,8 +57,9 @@
 	<style-text id="street-label-lg-b" k="name" size="28" style="bold"  character-spacing="0.3" fill="#666666" stroke="#e4e9cc" stroke-width="2.0" priority="1" />
 	<style-text id="street-label-sm-i" k="name" size="18" style="italic" fill="#666666" stroke="#e4e9cc" stroke-width="1.0" priority="3" />
 
+<!-- 	<style-text id="poi-label" k="name" size="16" fill="#000000" stroke="#e8ecd3" stroke-width="0.5" dy="2" dx="2" text-align="center" /> -->
 	<style-area id="park" fill="#afcfa2" />
-	<style-area id="park-2" src="patterns/park_texture.png" />
+	<style-area id="park-2" src="patterns/park_texture_2.png" />
 
 	<!-- ways -->
 	<m e="way">
@@ -141,6 +142,15 @@
 				</m>
 				<m v="fountain" closed="yes">
 					<area fill="#8db3b6" stroke="#6F9D9E" stroke-width="0.15" />
+				</m>
+				<m v="hospital" zoom-min="16">
+					<!-- <symbol src="13_hospital" /> -->
+				</m>
+				<m v="theatre" zoom-min="16">
+					<!-- <symbol src="17_movie_theatre" /> -->
+				</m>
+				<m v="toilets" zoom-min="16">
+					<!-- <symbol src="21_toilet" /> -->
 				</m>
 			</m>
 		</m>
@@ -231,73 +241,91 @@
 			</m>
 		</m>
 		<m k="leisure|kind" zoom-min="14">
-			<m v="nature_reserve" fade="9">
+			<m v="nature_reserve">
 				<area use="park"/>
 				<line use="park-line" />
 			</m>
 		</m>
 
 		<!-- waterways -->
-		<m k="kind">
-			<!-- waterway casings -->
-			<m v="water" zoom-min="0">
-				<area src="patterns/water_texture.png" fill="#8DB4B7" />
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-			</m>
-
-			<!-- waterway cores -->
-			<m v="ditch">
-				<line stroke="#6F9D9E" width="0.2" />
-			</m>
-			<m v="drain">
-				<line stroke="#6F9D9E" width="0.2" fix="true" fade="13" />
-			</m>
-			<!-- canal zoom levels -->
-			<m v="canal" zoom-min="0">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-				<m zoom-min="18">
-					<caption k="name" size="18" fill="#294d6b" />
+		<m k="layer_name" v="water">
+				<m k="geometry_type" v="Polygon">
+					<area src="patterns/water_texture.png" fill="#90b6b9"/>
 				</m>
-			</m>
-
-			<!-- stream zoom levels -->
-			<m v="stream">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-			</m>
-
-			<!-- river zoom levels -->
-			<m v="river" select="first">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.25" cap="butt" />
-			</m>
-
-			<m v="dock">
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m v="riverbank">
-				<!--
-					Account for potentially overlapping riverbank tiles with identical properties, except where one has a `name`
-					key and the other doesn't. See the 18/76454/99215 tile.
-				-->
-				<m k="name">
-					<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-					<line stroke="#6F9D9E" width="0.1" />
+				<!-- waterway casings -->
+	            <m k="kind" v="water">
+	                <line stroke="#6F9D9E" width="1.5" cap="butt" />
+	            </m>
+			  	<!-- waterway cores -->
+				<m k="kind" v="ditch" zoom-min="16">
+					<line stroke="#90b6b9" width="0.5" />
 				</m>
-				<area src="patterns/water_texture.png" fill="#8DB4B7"/>
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m v="weir">
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m v="dam">
-				<line stroke="#6F9D9E" width="0.1" />
-			</m>
-			<m k="kind" v="yes|true">
-				<line stroke="#6F9D9E" width="0.1" cap="round" />
-			</m>
+
+				<m k="kind" v="drain" zoom-min="16">
+					<line stroke="#90b6b9" width="0.5" fix="true" />
+				</m>
+
+				<!-- canal zoom levels -->
+				<m k="kind" v="canal" zoom-min="11">
+					<line stroke="#90b6b9" width="1" cap="round" />
+					<m zoom-min="14">
+						<line stroke="#90b6b9" width="2" cap="round" />
+					</m>
+					<m zoom-min="16">
+						<caption k="name" size="18" fill="#294d6b" />
+					</m>
+				</m>
+
+				<!-- stream zoom levels -->
+				<m k="kind" v="stream" zoom-min="11">
+					<line stroke="#90b6b9" width="1" cap="round" />
+					<m zoom-min="14">
+						<line stroke="#90b6b9" width="2" cap="round" />
+					</m>
+					<m zoom-min="16">
+						<caption k="name" size="18" fill="#294d6b" />
+					</m>
+				</m>
+
+				<!-- river zoom levels -->
+				<m k="kind" v="river" select="first">
+					<line stroke="#90b6b9" width="0.5" cap="round" />
+					<m zoom-min="11">
+						<line stroke="#90b6b9" width="1" cap="round" />
+					</m>
+					<m zoom-min="14">
+						<line stroke="#90b6b9" width="2" cap="round" />
+					</m>
+				</m>
+
+				<m k="kind" v="dock">
+					<line stroke="#90b6b9" width="0.5" />
+				</m>
+
+				<m k="kind" v="riverbank">
+					<!--
+						Account for potentially overlapping riverbank tiles with identical properties, except where one has a `name`
+						key and the other doesn't. See the 18/76454/99215 tile.
+					-->
+					<m k="name">
+						<area src="patterns/water_texture.png"/>
+						<line stroke="#6F9D9E" width="0.5" />
+					</m>
+					<area src="patterns/water_texture.png"/>
+					<line stroke="#6F9D9E" width="0.5" />
+				</m>
+
+				<m k="kind" v="weir" zoom-min="13">
+					<line stroke="#90b6b9" width="0.5" />
+				</m>
+
+				<m k="kind" v="dam" zoom-min="13">
+					<line stroke="#90b6b9" width="0.5" />
+				</m>
+
+				<m k="kind" v="yes|true">
+					<line stroke="#90b6b9" width="0.5" cap="round" />
+				</m>
 		</m>
 
 		<!-- military -->
@@ -322,17 +350,24 @@
 			<m v="tennis">
 				<area use="park"/>
 				<line stroke="#94af89" width="0.2" cap="butt" />
+				<m zoom-min="17">
+					<!-- <symbol src="26_sports" /> -->
+				</m>
 			</m>
 		</m>
 
 		<!-- tourism areas -->
 		<m k="kind">
+			<!-- <m v="attraction">
+				<area fill="#f2caea" />
+			</m> -->
 			<m v="zoo|picnic_site|caravan_site|camp_site">
 				<area use="park"/>
 				<line stroke="#94af89" width="0.2" cap="butt" />
 			</m>
 			<m k="name" zoom-min="16">
 				<text use="street-label-sm" />
+				<!-- <symbol src="6_park" /> -->
 			</m>
 		</m>
 
@@ -652,6 +687,9 @@
 							</m>
 							<m v="pedestrian">
 								<line stroke="#ebf0d8" width="0.85" />
+								<!-- <m zoom-min="15">
+									<text k="name" style="bold" size="10" stroke="#ebf0d8" stroke-width="2.0" />
+								</m> -->
 							</m>
 							<m v="unclassified|residential|living_street">
 								<line stroke="#d6dac2" width="1.25" />
@@ -793,6 +831,15 @@
 		<m k="kind" v="station">
 			<line stroke="#e8ecd3" width="0.4" cap="round" />
 			<line stroke="#e8ecd3" width="4.0" dasharray="2,200" cap="round" />
+			<m k="kind" v="cable_car">
+				<!-- <symbol src="" /> -->
+			</m>
+			<m k="kind" v="chair_lift">
+				<!-- <symbol src="" /> -->
+			</m>
+			<m k="kind" v="gondola">
+				<!-- <symbol src="" /> -->
+			</m>
 			<m zoom-min="17">
 				<text k="name" style="bold" size="10" fill="#606060" stroke="#ffffff" stroke-width="2.0" />
 			</m>
@@ -866,23 +913,180 @@
 	</m>
 
 	<m e="node">
+		<m k="kind">
+			<m k="kind" v="helipad" zoom-min="16">
+				<!-- <symbol src="1_airport" /> -->
+			</m>
+			<m k="kind" v="aerodrome|airport" zoom-min="16">
+				<!-- <symbol src="1_airport" /> -->
+			</m>
+		</m>
+
 		<m k="kind" v="bollard">
 			<circle radius="1.5" fill="#707070" />
 		</m>
 	</m>
 
 	<m k="kind">
+		<m k="kind" v="bus_stop" zoom-min="17">
+			<!-- <symbol src="5_bus" /> -->
+		</m>
+		<m k="kind" v="traffic_signals" zoom-min="16">
+			<!-- <symbol src="traffic_signal" /> -->
+		</m>
 		<m k="kind" v="turning_circle">
 			<circle radius="1.4" scale-radius="true" fill="#d6dac2" />
 		</m>
 	</m>
+<!-- 
+	<m k="amenity">
+		<m select="first">
+			<m v="atm" k="name" zoom-min="16">
+				<symbol src="9_bank" />
+			</m>
+			<m v="bank" k="name" zoom-min="16">
+				<symbol src="9_bank" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
 
+			<m v="bus_station" zoom-min="17">
+				<symbol src="5_bus" />
+			</m>
+
+			<m v="cafe" k="name" zoom-min="16">
+				<symbol src="23_cafe" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
+
+			<m v="cinema" k="name" zoom-min="18">
+				<symbol src="17_movie_theatre" />
+				<text use="poi-label" />
+			</m>
+			<m v="fast_food" k="name" zoom-min="16">
+				<symbol src="22_restaurant" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
+			<m v="fuel" k="name" zoom-min="18">
+				<symbol src="7_gas_station" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
+			<m v="hospital" k="name" zoom-min="16">
+				<symbol src="13_hospital" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
+			<m v="library" k="name" zoom-min="18">
+				<symbol src="10_library" />
+				<text use="poi-label" />
+			</m>
+			<m v="parking" zoom-min="17">
+				<symbol src="30_parking" />
+			</m>
+			<m v="pharmacy" k="name" zoom-min="18">
+				<symbol src="14_pharmacy" />
+				<text use="poi-label" />
+			</m>
+			<m v="place_of_worship" zoom-min="18">
+				<m k="denomination|religion" v="jewish">
+					<symbol src="18_spiritual_center" />
+					<m zoom-min="17">
+						<text use="poi-label" />
+					</m>
+				</m>
+				<m k="denomination|religion" v="muslim|moslem">
+					<symbol src="18_spiritual_center" />
+					<m zoom-min="17">
+						<text use="poi-label" />
+					</m>
+				</m>
+				<m k="denomination|religion" v="christian">
+					<symbol src="20_church" />
+					<m zoom-min="17">
+						<text use="poi-label" />
+					</m>
+				</m>
+			</m>
+			<m v="post_box" zoom-min="18">
+				<symbol src="12_post_office" />
+			</m>
+			<m v="post_office" zoom-min="16">
+				<symbol src="12_post_office" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
+			<m v="pub|bar" zoom-min="16">
+				<symbol src="23_bar" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
+			<m v="restaurant" zoom-min="16">
+				<symbol src="22_restaurant" />
+				<m zoom-min="17">
+					<text use="poi-label" />
+				</m>
+			</m>
+			<m v="school" zoom-min="18">
+				<symbol src="11_school" />
+				<text use="poi-label" />
+			</m>
+			<m v="theatre" zoom-min="18">
+				<symbol src="17_movie_theatre" />
+				<text use="poi-label" />
+			</m>
+			<m v="toilets" zoom-min="18">
+				<symbol src="21_toilet" />
+			</m>
+			<m v="university|college" zoom-min="18">
+				<symbol src="11_school" />
+				<text use="poi-label" />
+			</m>
+		</m>
+
+		<m k="indoor_level" v="first" zoom-min="16">
+			<text use="poi-label" />
+		</m>
+		<m k="indoor_level" v="second" zoom-min="16">
+			<text use="poi-label" />
+		</m>
+	</m>
+ -->
 	<m k="kind" v="memorial|archaeological_site">
 		<circle radius="3" fill="#4040ff" stroke="#606060" width="1.5" />
+		<m zoom-min="17">
+			<!-- <text use="poi-label" /> -->
+		</m>
 	</m>
 
 	<m k="addr:housenumber" zoom-min="18">
 		<caption k="addr:housenumber" style="bold" size="10" fill="#606060" stroke="#ffffff" stroke-width="2.0" />
+	</m>
+
+	<m k="kind">
+		<m select="first">
+			<m v="cave_entrance" zoom-min="20">
+				<!-- <symbol src="" /> -->
+			</m>
+			<m v="peak" zoom-min="20">
+				<!-- <symbol src="" /> -->
+			</m>
+			<m v="tree" zoom-min="20">
+				<!-- <symbol src="" /> -->
+			</m>
+			<m v="volcano" zoom-min="20">
+				<!-- <symbol src="" /> -->
+			</m>
+		</m>
 	</m>
 
 	<!--  labels -->
@@ -1053,4 +1257,42 @@
 		</m>
 	</m>
 
+	<m k="shop">
+		<m v="bakery" zoom-min="16">
+			<!-- <symbol src="22_restaurant" /> -->
+			<m zoom-min="17">
+				<!--<text use="poi-label" />-->
+			</m>
+		</m>
+		<m v="florist" zoom-min="18">
+			<!-- <symbol src="" /> -->
+		</m>
+		<m v="supermarket|organic" zoom-min="18">
+			<!-- <symbol src="" /> -->
+		</m>
+	</m>
+
+	<m k="kind" zoom-min="18">
+		<m v="alpine_hut">
+			<!-- <symbol src="" /> -->
+		</m>
+		<m v="camp_site">
+			<!-- <symbol src="" /> -->
+		</m>
+		<m v="hostel">
+			<!-- <symbol src="" /> -->
+		</m>
+		<m zoom-min="16" v="hotel">
+			<!-- <symbol src="8_hotel" /> -->
+			<m zoom-min="17">
+				<!--<text use="poi-label" />-->
+			</m>
+		</m>
+		<m v="information">
+			<!-- <symbol src="31_information" /> -->
+		</m>
+		<m v="viewpoint">
+			<!-- <symbol src="" /> -->
+		</m>
+	</m>
 </rendertheme>
